@@ -9,6 +9,7 @@ public class Dokumenttienhallinta {
         System.out.println("1. Luo uusi piirrustusluettelo\n2. Luo uusi piirustus\n3. Hae piirustusluettelo\n4. Hae piirustus");
         String komento = lukija.nextLine();
 
+
         while (!komento.equals("lopeta")) {
             System.out.println("1. Luo uusi piirrustusluettelo\n2. Luo uusi piirustus\n3. Hae piirustusluettelo\n4. Hae piirustus");
             komento = lukija.nextLine();
