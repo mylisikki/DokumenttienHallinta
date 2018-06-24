@@ -1,0 +1,2 @@
+public class Piirustus {
+}
