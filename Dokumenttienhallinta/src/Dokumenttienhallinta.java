@@ -14,9 +14,15 @@ public class Dokumenttienhallinta {
             komento = lukija.nextLine();
             if (komento == "1." || komento == "2." || komento == "3." || komento == "4.") {
                 if (komento == "1.") {
-                    Piirustusluettelo.luoUusi();
+                //    Piirustusluettelo.luoUusi();
                 } if (komento == "2.") {
-                //    Piirustus.luoUusi();
+                    System.out.print("Anna piirustusnumero: ");
+                    String numero = lukija.nextLine();
+                    System.out.println("");
+                    System.out.print("Anna sisalto: ");
+                    String sisalto = lukija.nextLine();
+                    System.out.println("");
+                    // piirustuksettaulu.add (Piirustus.luoUusi(numero, sisalto));
                 } if (komento == "3." || komento == "4.") {
                     System.out.println("Hakutoiminto ei ole vielä käytössä.");
                 }
