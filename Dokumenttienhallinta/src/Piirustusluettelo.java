@@ -1,8 +1,13 @@
+import java.util.List;
+
 public class Piirustusluettelo {
     private String LuetteloNimi;
     private String ProjektinNimi;
     private String LuetteloStatus;
+    private List<Piirustus> LuettelonPiirustukset;
 
+    public Piirustusluettelo() {
+    }
 
     public Piirustusluettelo luoUusi(String LuetteloNimi, String ProjektinNimi) {
         Piirustusluettelo uusi = new Piirustusluettelo();
