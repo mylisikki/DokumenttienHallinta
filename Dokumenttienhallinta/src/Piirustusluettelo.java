@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Piirustusluettelo {
@@ -7,6 +8,7 @@ public class Piirustusluettelo {
     private List<Piirustus> luettelonPiirustukset;
 
     public Piirustusluettelo() {
+        luettelonPiirustukset = new ArrayList<>();
     }
 
     public static Piirustusluettelo luoUusi(String LuetteloNimi, String ProjektinNimi) {
@@ -41,7 +43,7 @@ public class Piirustusluettelo {
     }
 
     public void lisaaPiirustus(Piirustus piirustus){
-        luettelonPiirustukset.add(piirustus);
+        this.luettelonPiirustukset.add(piirustus);
     }
 
     public void tulostaLuettelo(){

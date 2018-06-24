@@ -8,18 +8,20 @@ public class Dokumenttienhallinta {
         Piirustusluettelo piirustusluettelo = Piirustusluettelo.luoUusi("Rakennepiirustukset", "Projekti1");
 
         Scanner lukija = new Scanner(System.in);
-        System.out.println("1. Luo uusi piirustusluettelo\n2. Luo uusi piirustus\n3. Hae piirustusluettelo\n4. Hae piirustus");
-        String komento = lukija.nextLine();
-
+        //System.out.println("1. Luo uusi piirustusluettelo\n2. Luo uusi piirustus\n3. Hae piirustusluettelo\n4. Hae piirustus");
+        String komento = "komento";
 
         while (!komento.equals("lopeta")) {
             System.out.println("1. Luo uusi piirustusluettelo\n2. Luo uusi piirustus\n3. Hae piirustusluettelo\n4. Hae piirustus");
+            System.out.print("\nValitse toiminto: ");
             komento = lukija.nextLine();
-            if (komento == "1." || komento == "2." || komento == "3." || komento == "4.") {
-                if (komento == "1.") {
+            //System.out.println("Valintasi oli: " + komento);
+
+            if (komento.equals("1") || komento.equals("2") || komento.equals("3") || komento.equals("4")) {
+                if (komento.equals("1")) {
                 //    Piirustusluettelo.luoUusi();
                     piirustusluettelo.tulostaLuettelo();
-                } if (komento == "2.") {
+                } else if (komento.equals("2")) {
                     System.out.print("Anna piirustusnumero: ");
                     String numero = lukija.nextLine();
                     System.out.println("");
@@ -27,12 +29,12 @@ public class Dokumenttienhallinta {
                     String sisalto = lukija.nextLine();
                     System.out.println("");
                     piirustusluettelo.lisaaPiirustus (Piirustus.luoUusi(numero, sisalto));
-                } if (komento == "3." || komento == "4.") {
-                    System.out.println("Hakutoiminto ei ole vielä käytössä.");
+
+                } else if (komento.equals("3") || komento.equals("4")) {
+                    System.out.println("Hakutoiminto ei ole vielä käytössä.\n");
                 }
             } else {
-                System.out.println("Virheellinen komento. ");
-                System.out.println("");
+                System.out.println("Virheellinen komento.\n");
             }
 
         }

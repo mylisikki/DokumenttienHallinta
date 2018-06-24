@@ -1,3 +1,6 @@
+import java.sql.Time;
+import java.time.Instant;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Piirustus {
@@ -63,8 +66,9 @@ public class Piirustus {
         Piirustus uusi = new Piirustus();
         uusi.setPiirustusNumero(numero);
         uusi.setPiirustusSisalto(sisalto);
+        uusi.setPiirustusPaivamaara(Time.from(Instant.now()));
         return uusi;
-    }
+}
 
     public void teeRevisio(char tunnus, Date paivamaara) {
         this.setRevisiotunnus(tunnus);
