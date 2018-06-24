@@ -59,7 +59,7 @@ public class Piirustus {
         this.revisioPaivamaara = paivamaara;
     }
 
-    public Piirustus luoUusi(String numero, String sisalto) {
+    public static Piirustus luoUusi(String numero, String sisalto) {
         Piirustus uusi = new Piirustus();
         uusi.setPiirustusNumero(numero);
         uusi.setPiirustusSisalto(sisalto);

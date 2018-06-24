@@ -1,15 +1,15 @@
 import java.util.List;
 
 public class Piirustusluettelo {
-    private String LuetteloNimi;
-    private String ProjektinNimi;
-    private String LuetteloStatus;
-    private List<Piirustus> LuettelonPiirustukset;
+    private String luetteloNimi;
+    private String projektinNimi;
+    private String luetteloStatus;
+    private List<Piirustus> luettelonPiirustukset;
 
     public Piirustusluettelo() {
     }
 
-    public Piirustusluettelo luoUusi(String LuetteloNimi, String ProjektinNimi) {
+    public static Piirustusluettelo luoUusi(String LuetteloNimi, String ProjektinNimi) {
         Piirustusluettelo uusi = new Piirustusluettelo();
         uusi.setLuetteloNimi(LuetteloNimi);
         uusi.setProjektinNimi(ProjektinNimi);
@@ -17,26 +17,38 @@ public class Piirustusluettelo {
     }
 
     public String getLuetteloNimi() {
-        return LuetteloNimi;
+        return luetteloNimi;
     }
 
     public void setLuetteloNimi(String luetteloNimi) {
-        LuetteloNimi = luetteloNimi;
+        this.luetteloNimi = luetteloNimi;
     }
 
     public String getProjektinNimi() {
-        return ProjektinNimi;
+        return projektinNimi;
     }
 
     public void setProjektinNimi(String projektinNimi) {
-        ProjektinNimi = projektinNimi;
+        this.projektinNimi = projektinNimi;
     }
 
     public String getLuetteloStatus() {
-        return LuetteloStatus;
+        return luetteloStatus;
     }
 
     public void setLuetteloStatus(String luetteloStatus) {
-        LuetteloStatus = luetteloStatus;
+        this.luetteloStatus = luetteloStatus;
+    }
+
+    public void lisaaPiirustus(Piirustus piirustus){
+        luettelonPiirustukset.add(piirustus);
+    }
+
+    public void tulostaLuettelo(){
+        System.out.println("\n" + getLuetteloNimi() + ", " + getProjektinNimi());
+        for (Piirustus p: luettelonPiirustukset) {
+            System.out.println(p.getPiirustusNumero() + ", " + p.getPiirustusSisalto() + ", " + p.getPiirustusPaivamaara());
+        }
+        System.out.println("");
     }
 }
